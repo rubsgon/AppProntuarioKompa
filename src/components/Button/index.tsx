@@ -2,13 +2,14 @@ import React, { FC } from 'react'
 
 import { Container, Text } from './styles'
 
-type ButtonProps = {
+interface Props {
+    onPress: Function,
     text: string,
-    asButton?: React.Component
+    asButton?: React.Component,
 }
 
-const Button: FC<ButtonProps> = ({ text, asButton }) => (
-  <Container as={asButton}>
+const Button: FC<Props> = ({ onPress, text, asButton }) => (
+  <Container as={asButton} onPress={onPress}>
     <Text>{text}</Text>
   </Container>
 )

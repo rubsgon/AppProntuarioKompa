@@ -11,5 +11,5 @@ export const Container = styled.TouchableOpacity(props => ({
 export const Text = styled.Text(props => ({
     fontFamily: props.theme.fonts.primary,
     fontSize: props.theme.fonts.size.title,
-    color: props.theme.colors.textWhite,
+    color: props.theme.colors.textSecundary,
 }))
