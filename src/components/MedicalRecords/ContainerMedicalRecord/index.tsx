@@ -13,7 +13,7 @@ interface Props {
   disease?: boolean
  }
 
-const ContainerPatientInformation: FC<Props> = ({ title, value, disease = false }) => value.length > 0 && (
+const ContainerPatientInformation: FC<Props> = ({ title, value, disease = false }) => ((value && value?.length > 0) ? (
   <Container>
     <PatientInformation title>{title}</PatientInformation>
     {
@@ -21,6 +21,6 @@ const ContainerPatientInformation: FC<Props> = ({ title, value, disease = false 
          : <PatientInformation>{value}</PatientInformation>
      }
   </Container>
-)
+) : null)
 
 export default ContainerPatientInformation
