@@ -2,7 +2,6 @@ import styled from 'styled-components/native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 export const Container = styled.View((props) => ({
-  width: '100%',
 }))
 
 export const ContainerDisease = styled.View((props) => ({

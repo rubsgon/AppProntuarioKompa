@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const Container = styled.View((props) => ({
+export const Container = styled.ScrollView((props) => ({
   backgroundColor: '#FFF',
 }))
 

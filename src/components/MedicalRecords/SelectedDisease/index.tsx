@@ -17,8 +17,12 @@ interface Props {
 const SelectedDisease: FC<Props> = ({ data, onClose }) => (
   <Container>
     <FlatList
-      contentContainerStyle={{ flexDirection: 'row', alignItems: 'center' }}
-      keyExtractor={(item) => item?.value}
+      contentContainerStyle={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+      }}
+      keyExtractor={(item) => item?.id}
       data={data}
       renderItem={({ item }) => (
         <ContainerDisease>

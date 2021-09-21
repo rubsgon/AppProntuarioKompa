@@ -1,8 +1,8 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import Home from './components/Home'
-import RegisterMedicalRecord from './components/RegisterMedicalRecord'
+import Home from './screens/Home'
+import RegisterMedicalRecord from './screens/RegisterMedicalRecord'
 
 const MedicalReports = () => {
   const { Navigator, Screen } = createStackNavigator()

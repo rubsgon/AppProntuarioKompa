@@ -1,4 +1,4 @@
-import React, { FC, useContext, useEffect } from 'react'
+import React, { FC } from 'react'
 
 import Date from './Date'
 import Hour from './Hour'
@@ -17,7 +17,7 @@ const MedicalRecords: FC<Props> = ({ item }) => item.map((i) => (
     <ContainerMedicalRecord>
       <Hour item={i} />
       <Title>Anamnese</Title>
-      <BoxPatientInformation title="Queixa Principal" value={i?.queixas.label} />
+      <BoxPatientInformation title="Queixa Principal" value={i?.queixa?.label} />
       <BoxPatientInformation title="Doenças Adulto" value={i?.doencas} disease />
       <BoxPatientInformation title="Histórico da moléstia" value={i?.historico} />
     </ContainerMedicalRecord>
