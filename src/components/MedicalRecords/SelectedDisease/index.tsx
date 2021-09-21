@@ -11,18 +11,18 @@ import {
 
 interface Props {
     data: object[],
-    onClose: Function
+    onClose?: Function
 }
 
 const SelectedDisease: FC<Props> = ({ data, onClose }) => (
   <Container>
     <FlatList
       contentContainerStyle={{ flexDirection: 'row', alignItems: 'center' }}
-      keyExtractor={(item) => item.value}
+      keyExtractor={(item) => item?.value}
       data={data}
       renderItem={({ item }) => (
         <ContainerDisease>
-          <TextDisease>{item.label}</TextDisease>
+          <TextDisease>{item?.label}</TextDisease>
           {
               onClose && (
               <ButtonCloseDisease onPress={() => onClose(item)}>
