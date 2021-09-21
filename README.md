@@ -1,6 +1,6 @@
 # AppProntuarioKompa
 
-###Como instalar?
+### Como instalar?
 Para executar o projeto em seu ambiente execute os seguintes passos:
 1. Clonar o projeto:
 ```
