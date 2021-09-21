@@ -2,7 +2,6 @@ import React, {
   FC, useContext, useEffect, useState,
 } from 'react'
 import { useNavigation } from '@react-navigation/native'
-// import { useAsyncStorage } from '@react-native-async-storage/async-storage'
 
 import Button from '../../../../components/Button'
 import MedicalRecords from '../../../../components/MedicalRecords'
@@ -20,17 +19,14 @@ const Home: FC = () => {
   const { storage } = useContext(MedicalRecordsContext)
   const { getServiceStatus } = useAssinaProntuarioService()
   const [serviceStatus, setServiceStatus] = useState({})
-  // const { removeItem } = useAsyncStorage('@MedicalRecords')
 
   const getStatus = async () => {
     const { data, status } = await getServiceStatus()
     setServiceStatus(status === 200 && data?.ok)
   }
 
-  useEffect(async () => {
-    // removeItem()
-    // getStatus()
-    console.log(serviceStatus)
+  useEffect(() => {
+    getStatus()
   }, [])
 
   return (
