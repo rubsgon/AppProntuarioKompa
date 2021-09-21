@@ -10,5 +10,6 @@ export const TitleNoMedicalRecords = styled.Text((props) => ({
 }))
 
 export const AddMedicalRecordsButton = styled.TouchableOpacity((props) => ({
-  marginTop: 15,
+  marginTop: 5,
+  marginBottom: 20,
 }))

@@ -4,6 +4,7 @@ import moment from 'moment'
 import {
   Container,
   Text,
+  Icon,
 } from './styles'
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 
 const Hour: FC<Props> = ({ item }) => (
   <Container>
+    <Icon name="clock" size={24} />
     <Text>{moment(item?.createdAt).format('HH:mm')}</Text>
   </Container>
 )

@@ -3,7 +3,7 @@ import Picker, { PickerSelectProps } from 'react-native-picker-select'
 import { useField } from '@unform/core'
 
 import PatientInformation from '../../MedicalRecords/PatientInformation'
-import { pickerStyle, Container } from './styles'
+import { pickerStyle, Container, Icon } from './styles'
 import { TextError } from '../TextError'
 
 interface Props extends Omit<PickerSelectProps, 'onValueChange'> {
@@ -67,6 +67,7 @@ export default function RNPickerSelect({
     <Container>
       <PatientInformation title>{label}</PatientInformation>
       <Picker
+        Icon={() => <Icon name="chevron-down" size={12} />}
         ref={pickerRef}
         value={selectedValue}
         onValueChange={handleSelectedValue}

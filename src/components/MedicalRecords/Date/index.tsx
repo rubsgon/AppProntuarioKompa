@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import moment from 'moment'
+import 'moment/locale/pt-br'
 
 import {
   Container,

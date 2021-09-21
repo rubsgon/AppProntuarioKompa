@@ -12,4 +12,5 @@ export const ContainerPatientInformation = styled.View((props) => ({
 export const AddMedicalRecordButton = styled.TouchableOpacity((props) => ({
   marginTop: 20,
   marginHorizontal: 10,
+  marginBottom: 10,
 }))
